@@ -1,0 +1,12 @@
+version: "2"
+services:
+  quartus:
+    build: .
+    network_mode: host
+    environment:
+      - "DISPLAY"
+    privileged: true
+    volumes:
+      - "${XAUTHORITY}:/root/.Xauthority:rw"
+      - "./workspace:/root/workspace:rw"
+    ipc: host
