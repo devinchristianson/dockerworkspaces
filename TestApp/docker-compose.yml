@@ -1,0 +1,9 @@
+version: "3"
+services:
+  test-app:
+    build: .
+    network_mode: host
+    environment:
+      - "DISPLAY"
+    volumes:
+      - "${XAUTHORITY}:/root/.Xauthority:rw"
