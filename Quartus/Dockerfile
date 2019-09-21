@@ -1,15 +1,10 @@
 FROM centos:7
 
-# Set LOCALE to UTF8
-#RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
-#    locale-gen en_US.UTF-8 && \
-#    /usr/sbin/update-locale LANG=en_US.UTF-8
-
 # adding scripts
 ADD files/setup /root/
 ADD files/.profile /root/
-ADD files/usr/local/bin/quartus_wrapper /usr/local/bin/quartus_wrapper
 
+# Attempt to disable x server graphics cache sharing
 RUN echo "QT_X11_NO_MITSHM=1" >> /etc/environment
 
 # install quartus prime
