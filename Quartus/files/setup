@@ -26,12 +26,12 @@ expect "Installation directory \\\[/root/intelFPGA_lite/$version\\\]:" { send "/
 expect "Quartus Prime Lite Edition (Free)  \\\[Y/n\\\] :" { send "y\r" }
 expect "Quartus Prime Lite Edition (Free)  - Quartus Prime Help" { send "n\r" }
 expect "Quartus Prime Lite Edition (Free)  - Devices \\\[Y/n\\\] :" { send "y\r" }
-expect "Quartus Prime Lite Edition (Free)  - Devices - Arria II" { send "y\r" }
+expect "Quartus Prime Lite Edition (Free)  - Devices - Arria II" { send "n\r" }
+expect "Quartus Prime Lite Edition (Free)  - Devices - Cyclone" { send "n\r" }
+expect "Quartus Prime Lite Edition (Free)  - Devices - Cyclone" { send "n\r" }
 expect "Quartus Prime Lite Edition (Free)  - Devices - Cyclone" { send "y\r" }
-expect "Quartus Prime Lite Edition (Free)  - Devices - Cyclone" { send "y\r" }
-expect "Quartus Prime Lite Edition (Free)  - Devices - Cyclone" { send "y\r" }
-expect "Quartus Prime Lite Edition (Free)  - Devices - MAX II/V" { send "y\r" }
-expect "Quartus Prime Lite Edition (Free)  - Devices - MAX 10 FPGA" { send "y\r" }
+expect "Quartus Prime Lite Edition (Free)  - Devices - MAX II/V" { send "n\r" }
+expect "Quartus Prime Lite Edition (Free)  - Devices - MAX 10 FPGA" { send "n\r" }
 #expect "Quartus Prime Lite Edition (Free)  - Quartus Prime Update 17.1.1.593" { send "y\r" }
 expect "ModelSim - Intel FPGA Starter Edition (Free)" { send "y\r" }
 expect "ModelSim - Intel FPGA Edition" { send "n\r" }
