@@ -23,5 +23,7 @@ RUN yum update -y && yum install -y tcsh expect xorg-x11-server-Xorg \
 
 RUN  cd /root/quartus && \ 
     /root/setup && rm -rf /root/quartus && rm -rf /root/setup
+
 ENV PATH="/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin/:/opt/intelFPGA_lite/18.1/quartus/bin/:${PATH}"
+RUN ln -s /lib64/libudev.so.1 /lib64/libudev.so.0
 CMD ["quartus"]
