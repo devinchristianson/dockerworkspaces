@@ -11,3 +11,4 @@ services:
       - "./workspace:/root/workspace:rw"
     ipc: host
     cap_add: [ "sys_nice" ]
+    working_dir: /root/workspace
