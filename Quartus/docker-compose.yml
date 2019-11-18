@@ -10,3 +10,4 @@ services:
       - "${XAUTHORITY}:/root/.Xauthority:rw"
       - "./workspace:/root/workspace:rw"
     ipc: host
+    cap_add: [ "sys_nice" ]

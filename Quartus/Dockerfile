@@ -21,7 +21,7 @@ RUN yum update -y && yum install -y tcsh expect xorg-x11-server-Xorg \
     libXext libXft libXrender libXt libXtst ncurses ncurses-devel util-linux zlib \
     libpng12 patchelf
 
-RUN  cd /root/quartus && \ 
+RUN  cd /root/quartus && chmod +x /root/setup && \ 
     /root/setup && rm -rf /root/quartus && rm -rf /root/setup
 
 ENV PATH="/opt/intelFPGA_lite/18.1/quartus/sopc_builder/bin/:/opt/intelFPGA_lite/18.1/quartus/bin/:${PATH}"
